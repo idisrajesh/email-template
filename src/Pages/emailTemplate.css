@@ -1,0 +1,18 @@
+.outer-container-div{
+    display: flex;
+
+}
+
+.left-container-div{
+    width: 15%;
+    height: 100vh;
+    border-right:1px solid rgb(54, 48, 48);
+}
+
+.right-container-div{
+    padding-left: 2em;
+    padding-left: 2em;
+    width: 75%;
+    overflow-y:auto;
+    height: 100vh;
+}

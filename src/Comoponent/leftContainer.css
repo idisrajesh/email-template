@@ -1,0 +1,25 @@
+.left-outer-container-div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+.contianer-div{
+    border: 1p;
+}
+
+.paper{
+    padding-top:1em;
+    display: flex;  
+    flex-direction:column;
+    flex-wrap:wrap;
+    text-align:center;
+    margin-bottom:1em;
+    align-items:center;
+    cursor:pointer
+}
+
+.grid-row{
+    margin-bottom: 5em;
+}
