@@ -6,7 +6,7 @@ const initialState = {
 }
 
 export const templateSlice = createSlice({
-    name: 'counter',
+    name: 'template',
     initialState: {
         templateArray: [],
     },

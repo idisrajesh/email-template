@@ -7,7 +7,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
 import TextField from '@mui/material/TextField';
 import { useDispatch } from 'react-redux';
-import {addTextEditor} from '../../src/state/templateSlice'
+import {addTextEditor} from '../../../src/state/templateSlice'
 import "./leftContainer.css"
 function ButtonComponetDetails({open,setIsOpenButtonDetails}) {
     const [isOpen, setIsOpen] = useState(open);
@@ -39,7 +39,7 @@ function ButtonComponetDetails({open,setIsOpenButtonDetails}) {
         <React.Fragment>
             <Dialog open={open}>
                 <DialogTitle>Setup Button Config</DialogTitle>
-                <Grid container spacing={2}>
+                <Grid container spacing={2} className={"grid-outer-div"}>
                     <Grid item xs={12} md={6}>
                         <ChromePicker color={color} onChange={updateColor=>setColor(updateColor)}/>
                     </Grid>
@@ -51,7 +51,7 @@ function ButtonComponetDetails({open,setIsOpenButtonDetails}) {
                                 onChange={(event) => setButtonText(event.target.value)}
                             />
                         </Grid>
-                        <Grid item xs={12} md={12}>
+                        <Grid item xs={12} md={12} style={{marginBottom:"1em"}}>
                             <TextField
                                 required 
                                                              
@@ -70,9 +70,9 @@ function ButtonComponetDetails({open,setIsOpenButtonDetails}) {
 
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Button variant="contained" onClick={()=>{setIsOpenButtonDetails(false)}}>Cancle</Button>
+                        <Button variant="contained" color="primary" onClick={()=>{setIsOpenButtonDetails(false)}}>Cancle</Button>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} style={{textAlign:"center"}}>
                     <Button variant="contained" onClick={()=>{addButtonComponent()}}>Add Button</Button>
                     </Grid>
                 </Grid>

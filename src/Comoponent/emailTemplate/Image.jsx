@@ -1,8 +1,8 @@
 import React,{useEffect, useState} from 'react';
 import { ResizeProvider, ResizeConsumer } from "react-resize-context";
 import "./image.css";
-function Image(props) {
-    const [imageSize,setImageSize] = useState({width:300,height:300});
+function Image({id,updateImageSize,src}) {
+    const [imageSize,setImageSize] = useState({width:200,height:200});
     const getDatasetBySize = size => ({
         widthRange: imageSize.width > 200 ? "large" : "small",
         heightRange: imageSize.height > 200 ? "large" : "small"
@@ -11,6 +11,7 @@ function Image(props) {
         console.log(setImageSize)
     },[imageSize])
       const handleSizeChanged = size => {
+        updateImageSize(size,id);
         setImageSize({ size });
       };
     return (
@@ -18,11 +19,11 @@ function Image(props) {
         <ResizeProvider>
         <ResizeConsumer
           className="container"
-          onSizeChanged={()=>{handleSizeChanged()}}
-          updateDatasetBySize={getDatasetBySize()}
+          onSizeChanged={(e)=>{handleSizeChanged(e)}}
+          updateDatasetBySize={()=>getDatasetBySize()}
         >
           <div style={{textAlign:'center'}}>
-            <img src={props.src}></img>
+            <img src={src}></img>
           </div>
           
         </ResizeConsumer>

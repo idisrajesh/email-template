@@ -11,7 +11,7 @@ function ImageButtonComponent(props) {
             setIsOpenImageDetailsDialog={setIsOpenImageDetailsDialog}/>
             <Paper elevation={2} className={'paper'} onClick={()=>{setIsOpenImageDetailsDialog(true)}} >
                 <ImageOutlinedIcon fontSize='large' color="action" />
-                image
+                Image
             </Paper>
         </div>
 

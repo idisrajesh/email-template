@@ -6,7 +6,8 @@ import Button from '@mui/material/Button';
 import { ChromePicker } from 'react-color'
 import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
-import {addTextEditor} from '../../src/state/templateSlice';
+import {addTextEditor} from '../../../src/state/templateSlice'
+import  './leftContainer.css'
 
 function ImageDetailsComponent({isOpenImageDetailsDialog,setIsOpenImageDetailsDialog}) {
     const dispatch = useDispatch();
@@ -18,8 +19,8 @@ function ImageDetailsComponent({isOpenImageDetailsDialog,setIsOpenImageDetailsDi
     return (
         <React.Fragment>
             <Dialog open={isOpenImageDetailsDialog}>
-                <DialogTitle>Give  Image Link</DialogTitle>
-                <Grid container spacing={2}>
+                <DialogTitle  style={{marginLeft:'2.5em'}}>Give  Image Link</DialogTitle>
+                <Grid container spacing={3} className={"grid-outer-div"}>
                     <Grid item xs={1} md={1}></Grid>
                     <Grid item xs={12} md={11}>
                     <TextField
@@ -32,8 +33,8 @@ function ImageDetailsComponent({isOpenImageDetailsDialog,setIsOpenImageDetailsDi
                     <Grid item xs={12} md={5}>
                         <Button variant="contained" onClick={()=>{setIsOpenImageDetailsDialog(false)}}>Cancle</Button>
                     </Grid>
-                    <Grid item xs={12} md={6}>
-                    <Button variant="contained" onClick={()=>{addImageComponent()}}>Add Image</Button>
+                    <Grid item xs={12} style={{textAlign:'center'}} md={6}>
+                        <Button variant="contained"  onClick={()=>{addImageComponent()}}>Add Image</Button>
                     </Grid>
                 </Grid>
             </Dialog>

@@ -19,7 +19,7 @@ function ButtonComponent(props) {
             <ButtonComponetDetails open={isOpenButtonDetails} setIsOpenButtonDetails={setIsOpenButtonDetails}/>
             <Paper elevation={2} className={'paper'} onClick={()=>{upDateOpenButton()}}>
                 <IndeterminateCheckBoxOutlinedIcon fontSize='large' color="action" />
-                button
+                Button
             </Paper>            
         </div>
 

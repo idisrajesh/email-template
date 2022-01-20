@@ -2,7 +2,7 @@ import React from 'react';
 import { Paper } from '@mui/material';
 import RemoveOutlinedIcon from '@mui/icons-material/RemoveOutlined';
 import { useDispatch } from 'react-redux';
-import {addTextEditor} from '../../src/state/templateSlice'
+import {addTextEditor} from '../../../src/state/templateSlice';
 import "./leftContainer.css"
 
 
